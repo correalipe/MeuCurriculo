@@ -1,0 +1,174 @@
+/* styles.css */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px; /* Deixa o slider como um círculo */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "☀️"; /* Ícone de sol */
+  font-size: 14px; /* Ajuste o tamanho conforme necessário */
+  left: 1px; /* Ajuste a posição horizontal conforme necessário */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider:before {
+  content: "🌙"; /* Ícone de lua quando estiver em dark mode */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.profile-picture {
+  text-align: center;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.nav-tabs {
+  justify-content: center;
+}
+
+.contact-info nav {
+  margin-right: 20px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.contact-info ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.tab-content section {
+  margin-top: 40px;
+}
+
+h2 {
+  color: #348ee2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Adicione estas regras para as cores do header e footer */
+header, footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.dark header, .dark footer {
+  background-color: #20292e;
+  color: #ffffff;
+}
+
+.light header, .light footer {
+  background-color: #348ee2;
+  color: #fff;
+}
+
+/* Regras para o modo claro e escuro */
+:root.light {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+  --card-bg-color: #fafafa;
+}
+
+:root.dark {
+  --color-bg: #263238;
+  --color-fg: #ffffff;
+  --card-bg-color: #607d8b;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+.card {
+  background-color: var(--card-bg-color) !important;
+}
