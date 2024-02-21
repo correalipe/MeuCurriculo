@@ -42,10 +42,10 @@
   <main class="container">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="tab-pane fade show active" id="about-me-tab" data-toggle="tab" href="#about-me" role="tab" aria-controls="about-me" aria-selected="false">Sobre Mim</a>
+        <a class="nav-link show active" id="about-me-tab" data-toggle="tab" href="#about-me" role="tab" aria-controls="about-me" aria-selected="false">Sobre Mim</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="true">Experiências Profissionais</a>
+        <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="true">Experiências Profissionais</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Estudos</a>
@@ -55,7 +55,15 @@
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+      <div class="tab-pane fade show active" id="about-me" role="tabpanel" aria-labelledby="about-me-tab">
+        <section>
+          <p>Profissional com mais de 3 anos de experiência em desenvolvimento de software, incluindo engenharia
+            e análise de dados, automação e IA. Experiência anterior em uma empresa líder no segmento de
+            locação de veículos pesados. Proficiente em diversas linguagens de programação, como Python, PHP,
+            Node.js, Vue.js, React, JavaScript e TypeScript.</p>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
         <section>
           <ul>
             <li>
@@ -89,14 +97,6 @@
               <p>Formação em UI, UX e Product Design</p>
             </li>
           </ul>
-        </section>
-      </div>
-      <div class="tab-pane fade" id="about-me" role="tabpanel" aria-labelledby="about-me-tab">
-        <section>
-          <p>Profissional com mais de 3 anos de experiência em desenvolvimento de software, incluindo engenharia
-            e análise de dados, automação e IA. Experiência anterior em uma empresa líder no segmento de
-            locação de veículos pesados. Proficiente em diversas linguagens de programação, como Python, PHP,
-            Node.js, Vue.js, React, JavaScript e TypeScript.</p>
         </section>
       </div>
       <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
